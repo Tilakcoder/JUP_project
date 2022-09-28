@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juprints</title>
+
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cards.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="nav">
+        <!--        <button id="Navbutton">&#8801;</button>-->
+        <nav>
+            <div class="left">
+                <a class="logo" href="/">
+                    <img src="./image/UNIQUE PRINTS LOGO small.png" class="jup" alt="Juprints">
+                </a>
+            </div>
+            <form action="/search/" method="get" class="center">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" name="sbar" id="search" placeholder="Search">
+            </form>
+            <div class="right">
+                <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:white"
+                        aria-hidden="true"></i></a>
+                <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:white"></i></a>
+                <!-- <div class="subEle">Q</div>
+                    <div class="subEle">Q</div>
+                    <div class="subEle">Q</div> -->
+            </div>
+        </nav>
+    </div>
+
+    <form action="/search/" method="get" class="searchform">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="search" name="sbar" id="searchout" placeholder="Search">
+    </form>
+
+
+    <ul class="catagorytop">
+        <div class="subflex">
+            <li class="topcatagory">
+                <a href="/search/?sbar=plants" class="image">
+                    <img src="./svg/plants.png" />
+                </a>
+                <a href="/search/?sbar=plants" class="catagorytext">
+                    Plants
+                </a>
+            </li>
+            <li class="topcatagory">
+                <a href="/search/?sbar=cups" class="image">
+                    <img src="./svg/cup.png" alt="">
+                </a>
+                <a href="/search/?sbar=cups" class="image">
+                    Cups
+                </a>
+            </li>
+            <li class="topcatagory">
+                <a href="/search/?sbar=frames" class="image">
+                    <img src="./svg/frames.png" alt="">
+                </a>
+                <a href="/search/?sbar=frames" class="catagorytext">
+                    Frames
+                </a>
+            </li>
+        </div>
+        <div class="subflex">
+            <li class="topcatagory">
+                <a href="/search/?sbar=Gifts" class="image">
+                    <img src="./svg/gifts.png" alt="">
+                </a>
+                <a href="/search/?sbar=Gifts" class="catagorytext">
+                    Gifts
+                </a>
+            </li>
+            <li class="topcatagory">
+                <a href="/search/?sbar=Kids" class="image">
+                    <img src="./svg/kids.png" alt="">
+                </a>
+                <a href="/search/?sbar=Kids" class="catagorytext">
+                    Kids
+                </a>
+            </li>
+            <li class="topcatagory">
+                <a href="/search/?sbar=coupols" class="image">
+                    <img src="./svg/Coupols.png" alt="">
+                </a>
+                <a href="/search/?sbar=coupols" class="catagorytext">
+                    Coupols
+                </a>
+            </li>
+        </div>
+    </ul>
+
+
+    <div class="block">
+        <div class="slider">
+            <div class="slide" id="mover">
+                <a href="#" class="page">
+                    <img src="./image/sliders/1.png" alt="" class="slideIMG">
+                </a>
+                <a class="page">
+                    <img src="./image/sliders/2.png" alt="" class="slideIMG">
+                </a>
+                <a class="page">
+                    <img src="./image/sliders/3.png" alt="" class="slideIMG">
+                </a>
+            </div>
+            <div class="layer">
+                <div class="sliderhead"></div>
+                <div class="navigation">
+                    <button onclick="previous()" class="previous"><b>&lt;</b></button>
+                    <button onclick="next()" class="previous"><b>&gt;</b></button>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <button onclick="go(0)" class="dash spot" id="0"></button>
+                        <button onclick="go(1)" class="dash" id="1"></button>
+                        <button onclick="go(2)" class="dash" id="2"></button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                slider = { 'pos': 0, 'time': 5000, 'free': true }
+                mover = document.getElementById('mover');
+                gpage = mover.getElementsByClassName("page");
+                function spot() {
+                    id = slider.pos;
+                    dash = document.getElementsByClassName('dash');
+                    for (p = 0; p < dash.length; p++) {
+                        d = dash[p];
+                        if (d.id == String(id)) {
+                            d.classList.add("spot");
+                        }
+                        else {
+                            // console.log(d);
+                            d.classList.remove("spot");
+                        }
+                    }
+                }
+                function place(but) {
+                    mover.style.left = (slider.pos * 100 * -1) + '%';
+                    spot();
+                    if (!(but)) {
+                        slider.free = false;
+                    }
+                }
+                function go(id) {
+                    slider.pos = id;
+                    place(false);
+                }
+                function next(but = false) {
+                    if (slider.pos == gpage.length - 1) {
+                        slider.pos = 0;
+                    }
+                    else {
+                        slider.pos += 1;
+                    }
+                    place(but);
+                }
+                function previous(but = false) {
+                    if (slider.pos == 0) {
+                        slider.pos = gpage.length - 1;
+                    }
+                    else {
+                        slider.pos -= 1;
+                    }
+                    place(but);
+                }
+                function auto() {
+                    // console.log(gpage[0].style);
+                    if (slider.free) {
+                        next(true);
+                    }
+                    slider.free = true;
+                    setTimeout(auto, slider.time);
+                }
+                setTimeout(auto, slider.time);
+            </script>
+        </div>
+    </div>
+
+
+    <div class="catagoryRound">
+        <a href="/search/?sbar=plants" class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/plants.webp" class="roundIMG">
+            <div class="catagorytext">Plants</div>
+        </a>
+        <a class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/customised.webp" class="roundIMG">
+            <div class="catagorytext">Customizable</div>
+        </a>
+        <a class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/photoframe.webp" class="roundIMG">
+            <div class="catagorytext">Frames</div>
+        </a>
+        <a class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/mens.jpeg" class="roundIMG">
+            <div class="catagorytext">Mens</div>
+        </a>
+        <a class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/kids.jpeg" class="roundIMG">
+            <div class="catagorytext">Kids</div>
+        </a>
+        <a class="roundEach">
+            <img src="./image/Bhavesh Bhaiya Images/Images/gifts.webp" class="roundIMG">
+            <div class="catagorytext">Gifts</div>
+        </a>
+    </div>
+
+    <div class="trending">
+        <div class="heading">
+            <h2 class="headingHead">Trending Gifts</h2>
+            <div class="tagline">Handpicked for your gifting needs</div>
+        </div>
+        <div class="horizontal">
+            <h3 class="subheading">SAME DAY DELIVERY</h3>
+            <div class="cards">
+                <a class="verticard squared">
+                    <img class="vertiIMG "
+                        src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp"
+                        alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared2 squared">
+                    <img class="vertiIMG "
+                        src="./image/Bhavesh Bhaiya Images/Images/p-couple-in-love-personalized-magic-ceramic-mugs-set-of-2--153713-m.webp"
+                        alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared3 squared">
+                    <img class="vertiIMG "
+                        src="./image/Bhavesh Bhaiya Images/Images/p-jade-plant-in-metal-pot-144403-m.webp" alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared4 squared">
+                    <img class="vertiIMG "
+                        src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp"
+                        alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="vertholders">
+            <div class="verticle">
+                <h3 class="subheading">SAME DAY DELIVERY</h3>
+                <!-- <div class="vertbox"> -->
+                <div class="vertbox">
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/photoframe.webp" class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/annie-spratt-vs6a4EHj_Ro-unsplash.jpg" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.01.56 PM.jpeg" alt=""
+                                    class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-peperomia-plant-in-cylindrical-blue-pot-144401-m.webp"
+                                    alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-personalized-quirky-designed-mug-95079-m.webp"
+                                    class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp"
+                                    alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+
+            <div class="verticle">
+                <h3 class="subheading">SAME DAY DELIVERY</h3>
+                <div class="vertbox">
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-personalized-quirky-designed-mug-95079-m.webp"
+                                    class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.02.36 PM.jpeg" alt=""
+                                    class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.04.22 PM.jpeg" alt=""
+                                    class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-road-trip-personalized-caricature-stand-for-friends-136128-m.webp"
+                                    alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.03.48 PM.jpeg"
+                                    class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/annie-spratt-vs6a4EHj_Ro-unsplash.jpg" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bestseller">
+        <div class="heading">
+            <h2 class="headingHead">Best selling Gifts</h2>
+            <div class="tagline">Handpicked for your gifting needs</div>
+        </div>
+
+        <div class="sliderCarry">
+            <div class="productcard">
+                <a href="" class="cardself">
+                    <img src="./image/allproducts/bands.jpeg" alt="" class="cardIMG">
+                    <div class="contentCard">
+                        <div class="name" style="color:grey;">Hand Bands</div>
+                        <div class="price"><span class="verysmall">₹200</span></div>
+                    </div>
+                </a>                
+            </div>
+            <div class="IMGtext pcards" style="justify-content: space-between; align-items: center;">
+                <button class="previous" onclick="movePer('productcard', 100)"><</button>
+                <button class="previous" onclick="movePer('productcard', -100)">></button>
+            </div>
+            <script>
+                maintain = {}
+                function movePer(cName, shift) {
+                    cn = document.getElementsByClassName(cName)[0];
+                    allinside = cn.getElementsByClassName("cardself");
+
+                    if (cName in maintain) {
+                        stVal = maintain[cName] + shift
+                        maintain[cName] = stVal;
+                    }
+                    else {
+                        stVal = shift;
+                        maintain[cName] = shift
+                    }
+
+                    if (shift < 0) {
+                        placed = maintain[cName] - shift;
+                        count = placed / 25;
+                        if (count < 0) {
+                            count *= -1;
+                        }
+                        count += 4;
+                        remain = allinside.length - count;
+                        if (remain < 4) {
+                            stVal = placed + -1 * (25 * remain);
+                        }
+                        if (remain != 0) {
+                            maintain[cName] = stVal;
+                        }
+                    }
+                    else if (maintain[cName] != 0) {
+                        placed = maintain[cName] - shift;
+                        if (placed > -100) {
+                            stVal = 0;
+                        }
+                        maintain[cName] = 0
+                    }
+                    cn.style.left = stVal + "%";
+                }
+            </script>
+        </div>
+    </div>
+
+
+    <div class="midCrazy">
+        <div class="Crazyone">
+            <img src="./image/jup.jpeg" alt="" class="emptylogo">
+            <!-- <div class="IMGtext" style="color: #642714; align-items: center;">200+<br>Products</div> -->
+        </div>
+        <div class="quote">
+            <div class="textQuote">
+                We have what you love and what you wish and what you like
+                <br>
+                and still
+                <br>
+                We keep adding more products for you
+            </div>
+            <div class="quotesupport">
+                <a href="/latest/">Latest Products</a>
+<!--                <a href="">Most viewed</a>-->
+                <a href="/bestseller/">Best sellers</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="trending">
+        <div class="heading">
+            <h2 class="headingHead">Trending Gifts</h2>
+            <div class="tagline">Handpicked for your gifting needs</div>
+        </div>
+
+        <div class="vertholders">
+            <div class="verticle">
+                <h3 class="subheading">SAME DAY DELIVERY</h3>
+                <!-- <div class="vertbox"> -->
+                <div class="vertbox">
+                        <div class="verticards">
+                            <div class="subverti">
+                                <a class="verticard">
+                                    <img src="./image/Bhavesh Bhaiya Images/Images/photoframe.webp" class="vertiIMG" alt="">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                                <a class="verticard">
+                                    <img src="./image/annie-spratt-vs6a4EHj_Ro-unsplash.jpg" alt="" class="vertiIMG">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                                <a class="verticard">
+                                    <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.01.56 PM.jpeg" alt="" class="vertiIMG">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="verticards">
+                            <div class="subverti">
+                                <a class="verticard">
+                                    <img src="./image/Bhavesh Bhaiya Images/Images/p-peperomia-plant-in-cylindrical-blue-pot-144401-m.webp" alt="" class="vertiIMG">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                                <a class="verticard">
+                                    <img src="./image/Bhavesh Bhaiya Images/Images/p-personalized-quirky-designed-mug-95079-m.webp" class="vertiIMG" alt="">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                                <a class="verticard">
+                                    <img src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp" alt="" class="vertiIMG">
+                                    <h3 class="vertIMG">Flowers</h3>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                <!-- </div> -->
+            </div>
+
+            <div class="verticle">
+                <h3 class="subheading">SAME DAY DELIVERY</h3>
+                <div class="vertbox">
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-personalized-quirky-designed-mug-95079-m.webp" class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.02.36 PM.jpeg" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.04.22 PM.jpeg" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="verticards">
+                        <div class="subverti">
+                            <a class="verticard">
+                                <img src="./image/Bhavesh Bhaiya Images/Images/p-road-trip-personalized-caricature-stand-for-friends-136128-m.webp" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/allproducts/WhatsApp Image 2022-07-27 at 8.03.48 PM.jpeg" class="vertiIMG" alt="">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                            <a class="verticard">
+                                <img src="./image/annie-spratt-vs6a4EHj_Ro-unsplash.jpg" alt="" class="vertiIMG">
+                                <h3 class="vertIMG">Flowers</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="horizontal">
+            <h3 class="subheading">SAME DAY DELIVERY</h3>
+            <div class="cards">
+                <a class="verticard squared">
+                    <img class="vertiIMG " src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp" alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared2 squared">
+                    <img class="vertiIMG " src="./image/Bhavesh Bhaiya Images/Images/p-couple-in-love-personalized-magic-ceramic-mugs-set-of-2--153713-m.webp" alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared3 squared">
+                    <img class="vertiIMG " src="./image/Bhavesh Bhaiya Images/Images/p-jade-plant-in-metal-pot-144403-m.webp" alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+                <a class="squared4 squared">
+                    <img class="vertiIMG " src="./image/Bhavesh Bhaiya Images/Images/p-cheers-dad-personalized-magic-mug-140850-m.webp" alt="">
+                    <h3 class="IMGtext">Flowers</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bestseller">
+        <div class="heading">
+            <h2 class="headingHead">Best selling Gifts</h2>
+            <div class="tagline">Handpicked for your gifting needs</div>
+        </div>
+
+        <div class="sliderCarry">
+            <div class="productcard seconbp">
+                <a href="" class="cardself">
+                    <img src="./image/allproducts/bands.jpeg" alt="" class="cardIMG">
+                    <div class="contentCard">
+                        <div class="name" style="color:grey;">Hand Bands</div>
+                        <div class="price"><span class="verysmall">₹200</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="IMGtext pcards" style="justify-content: space-between; align-items: center;">
+                <button class="previous" onclick="movePer('seconbp', 100)"><</button>
+                <button class="previous" onclick="movePer('seconbp', -100)">></button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+           <div class="row">
+               <div class="footer-col">
+                   <h4>company</h4>
+                   <ul>
+                       <li><a href="/pages/About Us">About Us</a></li>
+                       <li><a href="/pages/Our Services">Our Services</a></li>
+                       <li><a href="/pages/Privacy Policy">Privacy Policy</a></li>
+                       <li><a href="/pages/Terms & Conditions">Terms & Conditions</a></li>
+                       <li><a href="/pages/Disclaimer">Disclaimer</a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>get help</h4>
+                   <ul>
+                       <li><a href="/pages/FAQ">FAQ</a></li>
+       <!--                <li><a href="#">shipping</a></li>-->
+       <!--                <li><a href="#">returns</a></li>-->
+                       <li><a href="/pages/Payment Options">Payment Options</a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>online shop</h4>
+                   <ul>
+                       <li><a href="/contact/">contact us</a></li>
+                       <li><a href="#"></a></li>
+                       <li><a href="#"></a></li>
+                       <li><a href="#"></a></li>
+                   </ul>
+               </div>
+               <div class="footer-col">
+                   <h4>follow us</h4>
+                   <div class="social-links">
+                       <a href="https://www.facebook.com/profile.php?id=100079019680210"><i class="fab fa-facebook-f"></i></a>
+       <!--                <a href="#"><i class="fab fa-twitter"></i></a>-->
+                       <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+       <!--                <a href="#"><i class="fab fa-linkedin-in"></i></a>-->
+                       <a href="https://bit.ly/3QqaHdi"><i class="fab fa-whatsapp"></i></a>
+                   </div>
+               </div>
+           </div>
+        </div>
+       </footer>
+       
+
+</body>
+
+</html>

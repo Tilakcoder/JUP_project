@@ -1,0 +1,124 @@
+body{
+    overflow-x:hidden;
+}
+/* Header ended */
+
+.products{
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*align-items: flex-start;*/
+}
+.card{
+    display: inline-block;
+    width: 20vw;
+    min-width: 165px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 5px;
+    background: rgba(224, 247, 248, 0.534);
+    box-shadow: 0.1px 0.1px 10px rgba(131, 130, 130, 0.466);
+    margin: 10px;
+    /* transition: box-shadow 1s; */
+}
+.ping{
+    /* margin: 10px; */
+    position: relative;
+    /* display: inline-block; */
+    height: 20vw;
+    min-height: 170px;
+    width: 20vw;
+    min-width: 188px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x:0px;
+    background-position-y:0px;
+    transition: all 2s;
+    /* transition: background-position-x 2s; */
+    /* transition: background-position-y 2s; */
+}
+.ping:hover{
+    cursor: pointer;
+    background-size: 110%;
+    background-position-x: -15px;
+    background-position-y: -15px;
+}
+.Name>a{
+    margin: 2px;
+    display: inline-block;
+    font-size: 25px;
+    font-family:cursive;
+    text-decoration: none;
+}
+.price{
+    margin-left: 10px;
+}
+.rate{
+    font-size: 25px;
+}
+.cardBcart{
+    /* border: 1px solid black; */
+    font-size: 15px;
+    background: transparent;
+    color: white;
+    /* padding: 4px; */
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+    border: 1px solid white;
+}
+.buts{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    height: 0px;
+    background: transparent;
+    transition: all 0.5s;
+}
+.detail{
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    /* height: 85px; */
+}
+.verysmall{font-size:15px}
+.card:hover .buts{
+    height:40px;
+    background: black;
+}
+
+
+.heading{
+    /* text-align: center; */
+    font-size: 50px;
+    margin: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid black;
+    transition: all 2s;
+}
+
+.slideOBJ{
+    background:black;
+    height:50vh;
+}
+@media screen and (max-width:950px){
+    .slider, .page{
+        width:100vw;
+    }
+    .products{margin: 0px;}
+    .card{
+        border-radius: 0px;
+        margin: 4px;
+    }
+    .heading{
+        font-size: 29px;
+        margin: 15px;
+    }
+}

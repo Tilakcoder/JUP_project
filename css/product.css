@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+}
+.list{
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+.lists{
+    width: 100px;
+    margin: 10px;
+}
+/* .lists{
+    border: none;
+    background: transparent;
+} */
+.lists:hover{
+    cursor: pointer;
+}
+.main{
+    width: 40vw;
+    max-width:450px;
+}
+.carry{
+    text-align: center;
+    position: sticky;
+    top: 10px;
+    width: 40vw;
+}
+
+.details>h1{
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.price{
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ratings{
+    font-size: 20px;
+    color: yellow;
+}
+.rlinks>button{
+    border: 1px solid rgb(60 134 245);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(60 134 245);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.rlinks>button:hover{
+    cursor: pointer;
+}
+.details{
+    width:50vw;
+}
+.entry{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.product{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+#whatsapp{
+    background: green;
+}
+@media screen and (max-width:950px){
+    .main{
+        width:50vw;
+        min-width:350px;
+    }
+    .details{
+        width:80vw;
+    }
+    .carry{width:auto;}
+    .list{
+        width:95vw;
+    }
+}
