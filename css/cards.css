@@ -60,22 +60,3 @@
     position: relative;
     display: inline-block;
 }
-.emptylogo{
-    width: 400px;
-}
-.IMGtext{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    /* border: 1px solid black; */
-    height: 100%;
-    /* text-align: center; */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0px;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    pointer-events:none;
-}

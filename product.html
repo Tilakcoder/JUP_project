@@ -25,7 +25,7 @@
                     <img src="./image/UNIQUE PRINTS LOGO small.png" class="jup" alt="Juprints">
                 </a>
             </div>
-            <form action="/search/" method="get" class="center">
+            <form action="/search.html" method="get" class="center">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="search" name="sbar" id="search" placeholder="Search">
             </form>
@@ -33,9 +33,6 @@
                 <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:white"
                         aria-hidden="true"></i></a>
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:white"></i></a>
-                <!-- <div class="subEle">Q</div>
-                    <div class="subEle">Q</div>
-                    <div class="subEle">Q</div> -->
             </div>
         </nav>
     </div>
@@ -43,19 +40,22 @@
     <div class="product">
         <div class="images">
             <div class="carry">
-                <img src="./image/allproducts/bands2.jpeg" alt="Not Found" id="imagebox" class="main">
+                <img src="" alt="Not Found" id="imagebox" class="main">
+                <video controls autoplay class="main" id="vediobox" src="" style="max-height: 500px;">
+                    <!-- <source src="/products/JUP 41/1.mp4" type="video/mp4" id="srcVedio"> -->
+                </video>
 
-                <div class="list">
+                <div class="list" id="MediaHold">
+                    <!-- <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)">
                     <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)">
                     <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)">
-                    <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)">
-                    <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)">
+                    <img src="./image/allproducts/bands.jpeg" alt="" class="lists" onclick="clickme(this)"> -->
                 </div>
             </div>
         </div>
         <div class="details">
             <div class="brands"></div>
-            <h1>Hand Bands</h1>
+            <h1 id="Pname">Hand Bands</h1>
             <div class="ratings">
                 <!--                    <span class="fa fa-star checked"></span>-->
                 <!--                    <span class="fa fa-star checked"></span>-->
@@ -63,82 +63,130 @@
                 <!--                    <span class="fa fa-star checked"></span>-->
                 <!--                    <span class="fa fa-star"></span>-->
             </div>
-            <div class="price"><b>Price: 200</b></div>
-            Yoo this product is awesome
+            <div class="price"><b>Price: <span id="price"></span></b><br><small style="font-size: 15px; color:gray">+ shipping charges</small></div>
+
+            <div class="rlinks">
+                <a href="" target="_blank" id="whatsapp">
+                    <i>Order on Whatsapp</i>
+                </a>
+            </div>
             <div class="details">
                 <h3>Product Details</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, labore animi possimus nesciunt
-                    laborum iusto consequatur commodi rem provident deserunt, impedit tempore, fugit sit! Tempore est
-                    quidem minima vel error cum, ea voluptas necessitatibus vero aperiam. Facilis ducimus,
-                    necessitatibus enim dicta, excepturi atque porro tenetur blanditiis eaque quae perspiciatis libero.
+                <p id="description" style="white-space: pre-line">
+                    .
                 </p>
             </div>
         </div>
 
         <script>
             main = document.getElementsByClassName('main')[0];
-            function clickme(self) { main.src = self.src; }
-        </script>
-        <script>
-            function findGetParameter(parameterName) {
-                var result = null,
-                    tmp = [];
-                location.search
-                    .substr(1)
-                    .split("&")
-                    .forEach(function (item) {
-                    tmp = item.split("=");
-                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-                    });
-                return result;
+            function clickme(self, img=true) {
+                if(img){
+                    document.getElementById("imagebox").style.display = "block";
+                    document.getElementById("vediobox").style.display = "none";
+                    main.src = self.src;
+                }
+                else{
+                    document.getElementById("imagebox").style.display = "none";
+                    document.getElementById("vediobox").style.display = "block";
+                    document.getElementById("vediobox").src = self.src;
+                    // self.pause();
+                }
             }
         </script>
     </div>
 
     <footer class="footer">
         <div class="container">
-           <div class="row">
-               <div class="footer-col">
-                   <h4>company</h4>
-                   <ul>
-                       <li><a href="/pages/About Us">About Us</a></li>
-                       <li><a href="/pages/Our Services">Our Services</a></li>
-                       <li><a href="/pages/Privacy Policy">Privacy Policy</a></li>
-                       <li><a href="/pages/Terms & Conditions">Terms & Conditions</a></li>
-                       <li><a href="/pages/Disclaimer">Disclaimer</a></li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4>get help</h4>
-                   <ul>
-                       <li><a href="/pages/FAQ">FAQ</a></li>
-       <!--                <li><a href="#">shipping</a></li>-->
-       <!--                <li><a href="#">returns</a></li>-->
-                       <li><a href="/pages/Payment Options">Payment Options</a></li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4>online shop</h4>
-                   <ul>
-                       <li><a href="/contact/">contact us</a></li>
-                       <li><a href="#"></a></li>
-                       <li><a href="#"></a></li>
-                       <li><a href="#"></a></li>
-                   </ul>
-               </div>
-               <div class="footer-col">
-                   <h4>follow us</h4>
-                   <div class="social-links">
-                       <a href="https://www.facebook.com/profile.php?id=100079019680210"><i class="fab fa-facebook-f"></i></a>
-       <!--                <a href="#"><i class="fab fa-twitter"></i></a>-->
-                       <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
-       <!--                <a href="#"><i class="fab fa-linkedin-in"></i></a>-->
-                       <a href="https://bit.ly/3QqaHdi"><i class="fab fa-whatsapp"></i></a>
-                   </div>
-               </div>
-           </div>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="/pages/About Us">About Us</a></li>
+                        <li><a href="/pages/Our Services">Our Services</a></li>
+                        <li><a href="/pages/Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="/pages/Terms & Conditions">Terms & Conditions</a></li>
+                        <li><a href="/pages/Disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="/pages/FAQ">FAQ</a></li>
+                        <!--                <li><a href="#">shipping</a></li>-->
+                        <!--                <li><a href="#">returns</a></li>-->
+                        <li><a href="/pages/Payment Options">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="/contact/">contact us</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100079019680210"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <!--                <a href="#"><i class="fab fa-twitter"></i></a>-->
+                        <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y="><i
+                                class="fab fa-instagram"></i></a>
+                        <!--                <a href="#"><i class="fab fa-linkedin-in"></i></a>-->
+                        <a href="https://bit.ly/3QqaHdi"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-       </footer>
+    </footer>
+    <script src="./javascript/findget.js"></script>
+    <script src="./javascript/data.js"></script>
+    <script>
+        jup = findGetParameter("jup");
+        document.getElementById("Pname").innerHTML = name(jup);
+        document.getElementById("price").innerHTML = Price(jup)
+        document.getElementById('whatsapp').href = "https://wa.me/917231098277?text=I%20liked%20your%20product%0a*"+name(jup)+"*%0acode:*"+jup+"*";
+
+        onefile = allData[jup]["Media"];
+        spl = onefile[0].split(".");
+        ftype = spl[spl.length - 1];
+
+        if (ftype == "mp4") {
+            // document.getElementById("imagebox").src = "/products/"+jup+"/"+onefile;
+            document.getElementById("imagebox").style.display = "none";
+            document.getElementById("vediobox").src = "/products/" + jup + "/" + onefile[0];
+        }
+        else {
+            document.getElementById("imagebox").src = "/products/" + jup + "/" + onefile[0];
+            document.getElementById("vediobox").style.display = "none";
+        }
+
+        mediaHolder = document.getElementById("MediaHold");
+        for (j = 0; j < onefile.length; j++) {
+            f = onefile[j];
+            spl = f.split(".");
+            if (spl[spl.length - 1] == "mp4") {
+                newE = document.createElement("vedio");
+                newE.classList.add("lists");
+                newE.src = "/products/" + jup + "/" + f;
+                mediaHolder.innerHTML += `<video class="lists" onclick='clickme(this, false)' src="` + "/products/" + jup + "/" + f + `#t=0.1">`;
+            }
+            else {
+                mediaHolder.innerHTML += `<img src="`+"/products/" + jup + "/" + f+`" alt="" class="lists" onclick="clickme(this)">`
+            }
+        }
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.open('GET', window.location.protocol + "//" + window.location.host + "/products/" + jup + "/NEW%20TEXT%20DOCUMENT.txt");
+        xhr.send();
+        xhr.onload = function () {
+            document.getElementById("description").innerHTML = xhr.response;
+        };
+    </script>
 </body>
+
 </html>
