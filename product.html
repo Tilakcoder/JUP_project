@@ -181,7 +181,7 @@
 
         let xhr = new XMLHttpRequest();
 
-        xhr.open('GET', window.location.protocol + "//" + window.location.host + "/products/" + jup + "/NEW%20TEXT%20DOCUMENT.txt");
+        xhr.open('GET', window.location.protocol + "//" + window.location.host + "/products/" + jup + "/New%20Text%20Document.txt");
         xhr.send();
         xhr.onload = function () {
             document.getElementById("description").innerHTML = xhr.response;
