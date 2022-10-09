@@ -24,6 +24,7 @@
                 <a class="logo" href="/">
                     <img src="./image/UNIQUE PRINTS LOGO small.png" class="jup" alt="Juprints">
                 </a>
+                <h2>JUprints</h2>
             </div>
             <form action="/search.html" method="get" class="center">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -32,6 +33,12 @@
             <div class="right">
                 <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:white"
                         aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
+                        class="fab fa-facebook-f" aria-hidden="true" style="color:white"></i></a>
+
+                <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
+                        class="fab fa-instagram" aria-hidden="true" style="color:white"></i></a>
+
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:white"></i></a>
             </div>
         </nav>
@@ -63,8 +70,11 @@
                 <!--                    <span class="fa fa-star checked"></span>-->
                 <!--                    <span class="fa fa-star"></span>-->
             </div>
-            <div class="price"><b>Price: <span id="price"></span></b><br><small style="font-size: 15px; color:gray">+ shipping charges</small></div>
-
+            <div class="price">
+                <b>Price: <span id="price"></span></b>
+                <small class="light"><small><s id="double"></s> <i>50% Discount</small></i></small>
+                <br>
+                <small style="font-size: 15px; color:gray">+shipping charges</small></div>
             <div class="rlinks">
                 <a href="" target="_blank" id="whatsapp">
                     <i>Order on Whatsapp</i>
@@ -80,13 +90,13 @@
 
         <script>
             main = document.getElementsByClassName('main')[0];
-            function clickme(self, img=true) {
-                if(img){
+            function clickme(self, img = true) {
+                if (img) {
                     document.getElementById("imagebox").style.display = "block";
                     document.getElementById("vediobox").style.display = "none";
                     main.src = self.src;
                 }
-                else{
+                else {
                     document.getElementById("imagebox").style.display = "none";
                     document.getElementById("vediobox").style.display = "block";
                     document.getElementById("vediobox").src = self.src;
@@ -96,7 +106,7 @@
         </script>
     </div>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col">
@@ -113,8 +123,8 @@
                     <h4>get help</h4>
                     <ul>
                         <li><a href="/pages/FAQ">FAQ</a></li>
-                        <!--                <li><a href="#">shipping</a></li>-->
-                        <!--                <li><a href="#">returns</a></li>-->
+                                       <li><a href="#">shipping</a></li>
+                                       <li><a href="#">returns</a></li>
                         <li><a href="/pages/Payment Options">Payment Options</a></li>
                     </ul>
                 </div>
@@ -132,23 +142,24 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100079019680210"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <!--                <a href="#"><i class="fab fa-twitter"></i></a>-->
+                                       <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y="><i
                                 class="fab fa-instagram"></i></a>
-                        <!--                <a href="#"><i class="fab fa-linkedin-in"></i></a>-->
+                                       <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://bit.ly/3QqaHdi"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script src="./javascript/findget.js"></script>
     <script src="./javascript/data.js"></script>
     <script>
         jup = findGetParameter("jup");
         document.getElementById("Pname").innerHTML = name(jup);
-        document.getElementById("price").innerHTML = Price(jup)
-        document.getElementById('whatsapp').href = "https://wa.me/917231098277?text=I%20liked%20your%20product%0a*"+name(jup)+"*%0acode:*"+jup+"*";
+        document.getElementById("price").innerHTML = Price(jup);
+        document.getElementById("double").innerHTML = Price(jup)*2;
+        document.getElementById('whatsapp').href = "https://wa.me/917231098277?text=I%20liked%20your%20product%0a*" + name(jup) + "*%0acode:*" + jup + "*";
 
         onefile = allData[jup]["Media"];
         spl = onefile[0].split(".");
@@ -175,7 +186,7 @@
                 mediaHolder.innerHTML += `<video class="lists" onclick='clickme(this, false)' src="` + "/products/" + jup + "/" + f + `#t=0.1">`;
             }
             else {
-                mediaHolder.innerHTML += `<img src="`+"/products/" + jup + "/" + f+`" alt="" class="lists" onclick="clickme(this)">`
+                mediaHolder.innerHTML += `<img src="` + "/products/" + jup + "/" + f + `" alt="" class="lists" onclick="clickme(this)">`
             }
         }
 
