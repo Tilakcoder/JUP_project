@@ -72,10 +72,48 @@ body{
 .light{
     color: grey;
 }
+
+.offers{
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    /* background: #642714;
+    color: white; */
+    border: 1px solid #642714;
+}
+.headBar{
+    border: none;
+    background: none;
+    color: #642714;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+.headBar:hover{
+    cursor: pointer;
+}
+.fer{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    /* border-radius: 10px; */
+}
+.allfers{
+    overflow: auto;
+    height: auto;
+    transition: all 1s;
+}
+
+
 @media screen and (max-width:950px){
     .main{
         width:50vw;
-        min-width:100vw;
+        min-width:350px;
     }
     .details{
         width:80vw;
@@ -83,5 +121,11 @@ body{
     .carry{width:auto;}
     .list{
         width:95vw;
+    }
+}
+
+@media screen and (max-width:300px){
+    .main{
+        min-width: 100vw;
     }
 }

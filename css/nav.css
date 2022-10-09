@@ -200,3 +200,9 @@ ul {
     border: none;
     width: 80vw;
 }
+
+@media screen and (max-width:300px){
+    #nss{
+        display: none;
+    }
+}
