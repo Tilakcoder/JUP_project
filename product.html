@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/JUP-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+    
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -14,6 +19,43 @@
     <link rel="stylesheet" href="./css/product.css">
 
 
+    <style>
+        .offers{
+            margin-top: 40px;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            /* background: #642714;
+            color: white; */
+            border: 1px solid #642714;
+        }
+        .headBar{
+            border: none;
+            background: none;
+            color: #642714;
+            font-size: 20px;
+            width: 100%;
+            position: relative;
+            text-align: left;
+        }
+        .headBar:hover{
+            cursor: pointer;
+        }
+        .fer{
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            /* border-radius: 10px; */
+        }
+        .allfers{
+            overflow: auto;
+            height: auto;
+            transition: all 1s;
+        }
+    </style>
 </head>
 
 <body>
@@ -71,7 +113,7 @@
                 <!--                    <span class="fa fa-star"></span>-->
             </div>
             <div class="price">
-                <b>Price: <span id="price"></span></b>
+                <b>Price:  ₹<span id="price"></span></b>
                 <small class="light"><small><s id="double"></s> <i>50% Discount</small></i></small>
                 <br>
                 <small style="font-size: 15px; color:gray">+shipping charges</small></div>
@@ -80,6 +122,30 @@
                     <i>Order on Whatsapp</i>
                 </a>
             </div>
+            <div class="offers">
+                <button class="headBar" onclick="expand()"><i class="fa fa-tag" aria-hidden="true"></i> offers</button>
+                <div class="allfers">
+                    <div class="fer">
+                        <b>Garanteed chashback on First purchase</b>
+                        <small>This offer is valid for the first purchase.</small>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                stats = true;
+                function expand(){
+                    if(stats){
+                        document.getElementsByClassName("allfers")[0].style.height = "0px";
+                        stats = false;
+                    }
+                    else{
+                        document.getElementsByClassName("allfers")[0].style.height = "auto";
+                        stats = true;
+                    }
+                }
+            </script>
+
             <div class="details">
                 <h3>Product Details</h3>
                 <p id="description" style="white-space: pre-line">
