@@ -68,8 +68,8 @@ allData = {
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.mp4'],
         'Price': {'default':199}
     },
-    'JUP 38': { 'Name': 'Rotating lamp with 21 pics', 'Catagory': ['Gift'], 'Media': ['1.mp4'], 'Price': {'default':760} },
-    'JUP 39': { 'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['Keychain'], 'Media': ['1.mp4'], 'Price': {'default':1400} },
+    'JUP 38': { 'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['Gift'], 'Media': ['1.mp4'], 'Price': {'default':760} },
+    'JUP 39': { 'Name': 'Rotating lamp with 21 pics', 'Catagory': ['Keychain'], 'Media': ['1.mp4'], 'Price': {'default':1400} },
     'JUP 40': {
         'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['Lamp'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
