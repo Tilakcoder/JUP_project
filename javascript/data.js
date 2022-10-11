@@ -62,45 +62,45 @@ allData = {
         'Name': 'Customized LED keychain and led pen combo', 'Catagory': ['Gift'],
         'Media': ['1.jpg', '2.mp4'],
         'Price': {'default':350}
-    }, 'JUP 36': { 'Name': '', 'Catagory': [], 'Media': ['1.jpg', '2.jpg'], 'Price': {'default':960} },
+    }, 'JUP 36': { 'Name': 'MDF frame with 3 layer', 'Catagory': [], 'Media': ['1.jpg', '2.jpg'], 'Price': {'default':960} },
     'JUP 37': {
-        'Name': 'MDF frame with 3 layer', 'Catagory': ['Frame'],
+        'Name': 'Mobile photo stand', 'Catagory': ['Frame'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.mp4'],
         'Price': {'default':199}
     },
-    'JUP 38': { 'Name': 'Mobile photo stand', 'Catagory': ['Gift'], 'Media': ['1.mp4'], 'Price': {'default':760} },
+    'JUP 38': { 'Name': 'Rotating lamp with 21 pics', 'Catagory': ['Gift'], 'Media': ['1.mp4'], 'Price': {'default':760} },
     'JUP 39': { 'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['Keychain'], 'Media': ['1.mp4'], 'Price': {'default':1400} },
     'JUP 40': {
-        'Name': 'Rotating lamp with 21 pics', 'Catagory': ['Lamp'],
+        'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['Lamp'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
         'Price': {'default':760}
     },
     'JUP 41': {
-        'Name': 'Customized wallet pen and keychain combo', 'Catagory': ['gift'],
+        'Name': 'customized LED keychain', 'Catagory': ['gift'],
         'Media': ['1.mp4', '2.mp4'],
         'Price': {'default':160}
     }, 'JUP 42': {
-        'Name': 'customized LED keychain', 'Catagory': ['Gift'],
+        'Name': 'wallet + pen combo', 'Catagory': ['Gift'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg',
             '6.jpg', '7.jpg'],
         'Price': {'default':760}
     },
-    'JUP 43': { 'Name': 'wallet + pen combo', 'Catagory': ['Gift'], 'Media': ['1.jpg', '2.jpg', '3.jpg'], 'Price': {'default':460} },
-    'JUP 44': { 'Name': 'steel Bottle', 'Catagory': ['Bottle'], 'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'], 'Price': {'default':520} },
-    'JUP 45': { 'Name': 'customized steel bottle', 'Catagory': ['Bottle'], 'Media': ['1.mp4', '2.jpg'], 'Price': {'default':499} },
-    'JUP 46': { 'Name': 'Customized alarm clock', 'Catagory': ['Clock'], 'Media': ['1.jpg', '2.jpg'], 'Price': {'default':350} },
+    'JUP 43': { 'Name': 'steel Bottle', 'Catagory': ['Gift'], 'Media': ['1.jpg', '2.jpg', '3.jpg'], 'Price': {'default':460} },
+    'JUP 44': { 'Name': 'customized steel bottle', 'Catagory': ['Bottle'], 'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'], 'Price': {'default':520} },
+    'JUP 45': { 'Name': 'Customized alarm clock', 'Catagory': ['Bottle'], 'Media': ['1.mp4', '2.jpg'], 'Price': {'default':499} },
+    'JUP 46': { 'Name': 'card holder now with premium pen', 'Catagory': ['Clock'], 'Media': ['1.jpg', '2.jpg'], 'Price': {'default':350} },
     'JUP 47': {
-        'Name': 'card holder now with premium pen', 'Catagory': ['Gift'],
+        'Name': 'leather keychain', 'Catagory': ['Gift'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
         'Price': {'default':399}
     },
     'JUP 48': {
-        'Name': 'leather keychain', 'Catagory': ['Keychain'],
+        'Name': 'customized pen and keychain', 'Catagory': ['Keychain'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'],
         'Price': {'default':199}
     },
     'JUP 49': {
-        'Name': 'customized pen and keychain', 'Catagory': ['Keychain'],
+        'Name': 'Customised pen and keychain combo', 'Catagory': ['Keychain'],
         'Media': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
         'Price': {'default':360}
     },
