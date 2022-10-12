@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/JUP-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <title id="title">Pages</title>
+
+    <style>
+        .content {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .content>p {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <!--        <button id="Navbutton">&#8801;</button>-->
+        <nav>
+            <div class="left">
+                <a class="logo" href="/">
+                    <img src="./image/UNIQUE PRINTS LOGO small.png" class="jup" alt="Juprints">
+                </a>
+                <h2 id="nss">JUPrints</h2>
+            </div>
+            <form action="/search.html" method="get" class="center">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" name="sbar" id="search" placeholder="Search">
+            </form>
+            <div class="right">
+                <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:white"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
+                        class="fab fa-facebook-f" aria-hidden="true" style="color:white"></i></a>
+
+                <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
+                        class="fab fa-instagram" aria-hidden="true" style="color:white"></i></a>
+
+                <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:white"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <form action="/search.html" method="get" class="searchform">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="search" name="sbar" id="searchout" placeholder="Search">
+    </form>
+
+    <div class="content" id="contents">
+        <link href="/pages/privacyPolicy.html" rel="import" />
+    </div>
+
+    <script src="./javascript/findget.js"></script>
+
+
+    <script>
+        page = findGetParameter("page");
+
+        // addFooter();
+
+        // $("#contents").load(window.location.protocol+"//"+window.location.host+"/pages/"+page+".html");
+    </script>
+
+<script>
+    const xhr = new XMLHttpRequest()
+    //open a get request with the remote server URL
+    xhr.open("GET", window.location.protocol+"//"+window.location.host+"/pages/"+page+".html")
+    console.log(window.location.protocol+"//"+window.location.host+"/pages/"+page+".html");
+    //send the Http request
+    xhr.send()
+
+    //EVENT HANDLERS
+
+    //triggered when the response is completed
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            //parse JSON datax`x
+            // data = JSON.parse(xhr.responseText)
+            // console.log(data.count)
+            // console.log(data.products)
+            // console.log(xhr.responseText);
+            document.getElementById('contents').innerHTML = xhr.responseText;
+        } else if (xhr.status === 404) {
+            console.log("No records found")
+        }
+    }
+</script>
+</body>
+
+</html>
