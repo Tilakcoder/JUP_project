@@ -65,10 +65,10 @@
                 </a>
             </li>
             <li class="topcatagory">
-                <a href="/search.html?sbar=cups" class="image">
+                <a href="/search.html?sbar=cup%20mug%20customize" class="image">
                     <img src="./svg/cup.png" alt="">
                 </a>
-                <a href="/search.html?sbar=cups" class="image">
+                <a href="/search.html?sbar=cup%20mug%20customize" class="image">
                     Cups
                 </a>
             </li>
@@ -555,9 +555,10 @@
     <script>
         ca1 = document.getElementById('carry1');
         car2 = document.getElementById('carry2');
-        carryO = ["JUP 01", "JUP 02", "JUP 03", "JUP 04", "JUP 05"];
+        carryO = ["JUP 01", "JUP 02", "JUP 03", "JUP 04", "JUP 05", "JUP 06"];
+        latest = Object.keys(allData).slice(-6);
 
-        places(ca1, carryO);
+        places(ca1, latest);
         places(car2, carryO);
     </script>
 </body>

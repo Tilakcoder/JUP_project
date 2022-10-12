@@ -10,7 +10,7 @@ function places(car1, carryOne){
                 <video src="/products/`+jup+`/`+viewImg+`" class="cardIMG"></video>
                 <div class="contentCard">
                     <div class="name" style="color:grey;">`+Pname+`</div>
-                    <div class="price"><span class="verysmall">₹`+Price(jup)+`</span></div>
+                    <div class="price"><span class="verysmall">₹`+Price(jup)+`<small style="color:grey;"><s>`+Price(jup)*2+`</s> 50% off</small></span></div>
                 </div>
             </a>`;
         }
@@ -19,7 +19,7 @@ function places(car1, carryOne){
                 <img src="/products/`+jup+`/`+viewImg+`" alt="" class="cardIMG">
                 <div class="contentCard">
                     <div class="name" style="color:grey;">`+Pname+`</div>
-                    <div class="price"><span class="verysmall">₹`+Price(jup)+`</span></div>
+                    <div class="price"><span class="verysmall">₹`+Price(jup)+` <small style="color:grey;"><s>`+Price(jup)*2+`</s> 50% off</small></span></div>
                 </div>
             </a>`;
         }
