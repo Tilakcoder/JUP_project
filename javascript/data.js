@@ -169,7 +169,7 @@ allData = {
     },
     'JUP 68': { 'Name': 'Kids lunch box', 'Catagory': ['Kids'], 'Media': ['1.jpg', '2.jpg', '3.jpg'], 'Price': {'default':899} }
 }
-//@DataEnded
+//@
 
 function name(jup){
     return allData[jup]['Name'];
