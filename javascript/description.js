@@ -1,3 +1,4 @@
+//@
 description = {
     'JUP 01': 'customised wallet pen combo\n\nScope of any name can be customised on pen and wallet\n\n\n6 colors available\n\nCharm option available\n\n',
     'JUP 02': '❤️ Customised soft silicon cover\n\n❤️clear case with 1 Name and 1 charm \n\n❤️Any name can be customised & charm option in list\n\n❤️Almost all models available\n\n❤️Superior silicon quality \n\n\n\n',
@@ -68,6 +69,7 @@ description = {
     'JUP 67': 'Faux Leather Ladies Wallets 2.0\n\n\n\nIncludes :- 1 name tag upto 9 letters and 1 charm & Box Packing.\n\nAvailable colours:- Black, Brown , Tan , Royal Blue , Wine ,olive & Grey\n\nDimension:- 19x10x2cm when closed\n\nSlots:- 6x card slots , 4x slots , 1x chain compartment',
     'JUP 68': '🔹Product : Kids Lunch Box 📦 \n\n\n\n🔹Scope of name and cartoon customised \nIncludes 1 Big box\n1 small box \n\n🔹Add spoon and fork for ₹50/- extra\n\n❣️ colors - Blue , Red , Pink ❣️\n\n🔹Dispatched on 2nd Working Day'
 }
+//@
 
 
 function find(keyword){
