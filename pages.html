@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDTPDK4W80"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CDTPDK4W80');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,30 +120,30 @@
         // $("#contents").load(window.location.protocol+"//"+window.location.host+"/pages/"+page+".html");
     </script>
 
-<script>
-    const xhr = new XMLHttpRequest()
-    //open a get request with the remote server URL
-    xhr.open("GET", window.location.protocol+"//"+window.location.host+"/pages/"+page+".html")
-    console.log(window.location.protocol+"//"+window.location.host+"/pages/"+page+".html");
-    //send the Http request
-    xhr.send()
+    <script>
+        const xhr = new XMLHttpRequest()
+        //open a get request with the remote server URL
+        xhr.open("GET", window.location.protocol + "//" + window.location.host + "/pages/" + page + ".html")
+        console.log(window.location.protocol + "//" + window.location.host + "/pages/" + page + ".html");
+        //send the Http request
+        xhr.send()
 
-    //EVENT HANDLERS
+        //EVENT HANDLERS
 
-    //triggered when the response is completed
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            //parse JSON datax`x
-            // data = JSON.parse(xhr.responseText)
-            // console.log(data.count)
-            // console.log(data.products)
-            // console.log(xhr.responseText);
-            document.getElementById('contents').innerHTML = xhr.responseText;
-        } else if (xhr.status === 404) {
-            console.log("No records found")
+        //triggered when the response is completed
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                //parse JSON datax`x
+                // data = JSON.parse(xhr.responseText)
+                // console.log(data.count)
+                // console.log(data.products)
+                // console.log(xhr.responseText);
+                document.getElementById('contents').innerHTML = xhr.responseText;
+            } else if (xhr.status === 404) {
+                console.log("No records found")
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>

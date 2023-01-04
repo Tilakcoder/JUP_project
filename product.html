@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDTPDK4W80"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CDTPDK4W80');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/JUP-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
-    
+
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -75,10 +84,11 @@
                 <!--                    <span class="fa fa-star"></span>-->
             </div>
             <div class="price">
-                <b>Price:  ₹<span id="price"></span></b>
+                <b>Price: ₹<span id="price"></span></b>
                 <small class="light"><small><s id="double"></s> <i>50% Discount</small></i></small>
                 <br>
-                <small style="font-size: 15px; color:gray">+shipping charges</small></div>
+                <small style="font-size: 15px; color:gray">+shipping charges</small>
+            </div>
             <div class="rlinks">
                 <a href="" target="_blank" id="whatsapp">
                     <i>Order on Whatsapp</i>
@@ -96,12 +106,12 @@
 
             <script>
                 stats = true;
-                function expand(){
-                    if(stats){
+                function expand() {
+                    if (stats) {
                         document.getElementsByClassName("allfers")[0].style.height = "0px";
                         stats = false;
                     }
-                    else{
+                    else {
                         document.getElementsByClassName("allfers")[0].style.height = "auto";
                         stats = true;
                     }
@@ -173,7 +183,7 @@
         jup = findGetParameter("jup");
         document.getElementById("Pname").innerHTML = name(jup);
         document.getElementById("price").innerHTML = Price(jup);
-        document.getElementById("double").innerHTML = Price(jup)*2;
+        document.getElementById("double").innerHTML = Price(jup) * 2;
         document.getElementById('whatsapp').href = "https://wa.me/917231098277?text=I%20liked%20your%20product%0a*" + name(jup) + "*%0acode:*" + jup + "*";
 
         onefile = allData[jup]["Media"];
