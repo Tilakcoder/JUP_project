@@ -160,6 +160,16 @@ ul {
     background-color: #ffffff;
 }
 
+.searchform {
+    border-bottom: 1px solid black;
+    margin: 20px;
+    /* padding: 20px; */
+    padding-bottom: 0px;
+    position: relative;
+    font-size: 25px;
+    display: none;
+}
+
 /*responsive*/
 @media(max-width: 767px) {
     .footer-col {
@@ -182,16 +192,6 @@ ul {
     .searchform {
         display: flex;
     }
-}
-
-.searchform {
-    border-bottom: 1px solid black;
-    margin: 20px;
-    /* padding: 20px; */
-    padding-bottom: 0px;
-    position: relative;
-    font-size: 25px;
-    /*display: none;*/
 }
 
 #searchout {
