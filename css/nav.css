@@ -1,3 +1,8 @@
+:root {
+    --backColor: #0c1d36;
+    --front: #ffffff;
+}
+
 body {
     margin: 0px;
 }
@@ -16,14 +21,14 @@ nav>div {
 }
 
 .nav {
-    background: #642714;
+    background: var(--backColor);
     position: sticky;
     top: 0px;
     z-index: 10;
 }
 
 .jup {
-    width: 60px;
+    width: 120px;
     border-radius: 50px;
     margin: 5px;
 }

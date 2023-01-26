@@ -108,7 +108,7 @@ body {
 
 /* topcatagory */
 .catagorytop {
-    border: 1px solid #642714;
+    border: 1px solid var(--backColor);
     border-radius: 20px;
     margin: 20px;
     display: flex;
@@ -145,7 +145,7 @@ div.subflex {
 .catagorytext {
     text-align: center;
     text-decoration: none;
-    color: #642714;
+    color: var(--backColor);
 }
 
 .catagoryRound {
@@ -186,7 +186,7 @@ div.subflex {
 }
 
 .subheading {
-    border-bottom: 1px solid #642714;
+    border-bottom: 1px solid var(--backColor);
     margin: 0px;
 }
 
@@ -277,7 +277,7 @@ div.subflex {
 
 
 .quote {
-    color: #642714;
+    color: var(--backColor);
     font-size: 30px;
     text-align: center;
 }
@@ -290,12 +290,12 @@ div.subflex {
 }
 
 .quotesupport>a {
-    color: #642714;
+    color: var(--backColor);
     text-decoration: none;
     transition: all 1s;
     text-decoration: underline transparent;
     margin: 20px;
-    border: 1px solid #642714;
+    border: 1px solid var(--backColor);
     padding: 10px;
     border-radius: 10px;
     /* flex: 1; */
@@ -303,7 +303,7 @@ div.subflex {
 
 .quotesupport>a:hover {
     cursor: pointer;
-    text-decoration: underline #642714;
+    text-decoration: underline var(--backColor);
 }
 
 .emptylogo{
@@ -382,5 +382,5 @@ div.subflex {
 
 a {
     text-decoration: none;
-    color: #642714;
+    color: var(--backColor);
 }
