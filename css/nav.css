@@ -1,6 +1,6 @@
 :root {
     --backColor: #0c1d36;
-    --front: #ffffff;
+    --front: #f9cc0b;
 }
 
 body {
@@ -8,16 +8,21 @@ body {
 }
 
 nav {
-    justify-content: space-between;
-    flex: 1;
-    color: white;
+    color: var(--front);
+    width: 100%;
+    position: relative;
 }
 
 nav,
-.nav,
-nav>div {
+.nav{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+nav>div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav {
@@ -30,7 +35,6 @@ nav>div {
 .jup {
     width: 120px;
     border-radius: 50px;
-    margin: 5px;
 }
 
 #Navbutton {
@@ -38,13 +42,14 @@ nav>div {
     border: none;
     padding: 10px;
     background: transparent;
-    color: white;
+    color: var(--front);
 }
 
 #Navbutton:hover,
 a {
     cursor: pointer;
 }
+
 
 .center,
 #search {
@@ -55,13 +60,21 @@ a {
     /* background: white; */
     /* color: black; */
     padding: 5px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--front);
+    margin-right: auto;
+    width: 30%;
+}
+
+.right{
+    margin-left: auto;
+    width: 30%;
+    justify-content: end;
 }
 
 #search {
     background: transparent;
     border: none;
-    color: white;
+    color: var(--front);
 }
 
 .subEle {
@@ -109,7 +122,7 @@ ul {
 
 .footer-col h4 {
     font-size: 18px;
-    color: #ffffff;
+    color: var(--front);
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -121,7 +134,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: white;
+    background-color: var(--front);
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -134,16 +147,16 @@ ul {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: #ffffff;
+    color: var(--front);
     text-decoration: none;
     font-weight: 300;
-    color: white;
+    color: var(--front);
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: var(--front);
     padding-left: 8px;
 }
 
@@ -156,13 +169,13 @@ ul {
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: var(--front);
     transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
     color: #24262b;
-    background-color: #ffffff;
+    background-color: var(--front);
 }
 
 .searchform {

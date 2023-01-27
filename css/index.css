@@ -277,7 +277,7 @@ div.subflex {
 
 
 .quote {
-    color: var(--backColor);
+    color: var(--front);
     font-size: 30px;
     text-align: center;
 }
