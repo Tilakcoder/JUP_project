@@ -68,11 +68,13 @@
             hidden = document.getElementsByClassName("hideSearch")[0];
             function callSearch(){
                 getH = hidden.getBoundingClientRect().height;
-                if(getH==0){
-                    hidden.style.height = "71px";
-                }
-                else{
-                    hidden.style.height = "0px";
+                if(hidden.style.display != "none"){
+                    if(getH==0){
+                        hidden.style.height = "71px";
+                    }
+                    else{
+                        hidden.style.height = "0px";
+                    }
                 }
             }
         </script>

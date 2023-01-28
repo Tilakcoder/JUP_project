@@ -231,16 +231,18 @@ ul {
     }
 }
 
+@media screen and (min-width:600px){
+    .hideSearch{ 
+        display: none;
+    }
+}
+
 @media screen and (max-width:600px) {
     .center {
         /* display: none; */
         background: transparent;
         flex-direction: row;
     }
-
-    /* .hideSearch{ */
-        /* display: none;
-    } */
     .center>i{
         color: white;
     }
