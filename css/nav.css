@@ -29,6 +29,8 @@ nav>div {
     background: var(--backColor);
     position: sticky;
     top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: 10;
 }
 
@@ -59,8 +61,15 @@ a {
 .center {
     /* background: white; */
     /* color: black; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     padding: 5px;
-    border-bottom: 1px solid var(--front);
+    overflow: hidden;
+    border-bottom: 1px solid var(--backColor);
+    color: var(--backColor);
+    background: white;
+    border-radius: 20px;
     margin-right: auto;
     width: 30%;
 }
@@ -72,9 +81,16 @@ a {
 }
 
 #search {
+    position: relative;
+    width: 100%;
     background: transparent;
     border: none;
-    color: var(--front);
+    color: var(--backColor);
+    flex: 1;
+    border-radius: 10px;
+}
+#search:active{
+    border: 1px solid red;
 }
 
 .subEle {
@@ -204,6 +220,14 @@ ul {
 
 @media screen and (max-width:600px) {
     .center {
+        /* display: none; */
+        background: transparent;
+        flex-direction: row;
+    }
+    .center>i{
+        color: white;
+    }
+    #search{
         display: none;
     }
 
@@ -222,5 +246,11 @@ ul {
 @media screen and (max-width:300px){
     #nss{
         display: none;
+    }
+}
+
+@media screen and (max-width:520px){
+    .subEle{
+        margin: 5px;
     }
 }
