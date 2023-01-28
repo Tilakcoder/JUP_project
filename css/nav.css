@@ -238,9 +238,9 @@ ul {
         flex-direction: row;
     }
 
-    .hideSearch{
-        display: none;
-    }
+    /* .hideSearch{ */
+        /* display: none;
+    } */
     .center>i{
         color: white;
     }
