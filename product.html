@@ -31,16 +31,19 @@
 
 <body>
     <div class="nav">
-        <!--        <button id="Navbutton">&#8801;</button>-->
         <nav>
-            <form action="/search.html" method="get" class="center">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="search" name="sbar" id="search" placeholder="Search">
-            </form>
+            <div class="start">
+                <button id="Navbutton">&#8801;</button>
+                <form action="/search.html" method="get" class="center">
+                    <i class="fa fa-search" aria-hidden="true" onclick="callSearch()"></i>
+                    <input type="search" name="sbar" id="search" placeholder="Search">
+                </form>
+            </div>
             <div class="left">
                 <a class="logo" href="/">
                     <img src="./image/juprints-low-resolution-color-logo.png" class="jup" alt="Juprints">
                 </a>
+                <!-- <h2 id="nss">JUPrints</h2> -->
             </div>
             <div class="right">
                 <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
@@ -54,6 +57,24 @@
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
             </div>
         </nav>
+        <div class="hideSearch">
+            <form action="/search.html" method="get" class="searchform">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" name="sbar" id="searchout" placeholder="Search">
+            </form>
+        </div>
+        <script>
+            hidden = document.getElementsByClassName("hideSearch")[0];
+            function callSearch(){
+                getH = hidden.getBoundingClientRect().height;
+                if(getH==0){
+                    hidden.style.height = "71px";
+                }
+                else{
+                    hidden.style.height = "0px";
+                }
+            }
+        </script>
     </div>
 
     <div class="product">

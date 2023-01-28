@@ -32,13 +32,14 @@
 
 <body>
     <div class="nav">
-        <!--        <button id="Navbutton">&#8801;</button>-->
         <nav>
-            
-            <form action="/search.html" method="get" class="center">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="search" name="sbar" id="search" placeholder="Search">
-            </form>
+            <div class="start">
+                <button id="Navbutton">&#8801;</button>
+                <form action="/search.html" method="get" class="center">
+                    <i class="fa fa-search" aria-hidden="true" onclick="callSearch()"></i>
+                    <input type="search" name="sbar" id="search" placeholder="Search">
+                </form>
+            </div>
             <div class="left">
                 <a class="logo" href="/">
                     <img src="./image/juprints-low-resolution-color-logo.png" class="jup" alt="Juprints">
@@ -57,12 +58,26 @@
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
             </div>
         </nav>
+        <div class="hideSearch">
+            <form action="/search.html" method="get" class="searchform">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" name="sbar" id="searchout" placeholder="Search">
+            </form>
+        </div>
+        <script>
+            hidden = document.getElementsByClassName("hideSearch")[0];
+            function callSearch(){
+                getH = hidden.getBoundingClientRect().height;
+                if(getH==0){
+                    hidden.style.height = "71px";
+                }
+                else{
+                    hidden.style.height = "0px";
+                }
+            }
+        </script>
     </div>
 
-    <form action="/search.html" method="get" class="searchform">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <input type="search" name="sbar" id="searchout" placeholder="Search">
-    </form>
 
 
     <ul class="catagorytop">
@@ -124,6 +139,9 @@
     <div class="block">
         <div class="slider">
             <div class="slide" id="mover">
+                <a href="" class="page">
+                    <img src="./image/sliders/valentines.jpeg" alt="" class="slideIMG">
+                </a>
                 <a href="#" class="page">
                     <img src="./image/sliders/3.png" alt="" class="slideIMG">
                 </a>
@@ -145,6 +163,7 @@
                         <button onclick="go(0)" class="dash spot" id="0"></button>
                         <button onclick="go(1)" class="dash" id="1"></button>
                         <button onclick="go(2)" class="dash" id="2"></button>
+                        <button onclick="go(3)" class="dash" id="3"></button>
                     </div>
                 </div>
             </div>

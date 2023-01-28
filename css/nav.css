@@ -26,6 +26,7 @@ nav>div {
 }
 
 .nav {
+    flex-direction: column;
     background: var(--backColor);
     position: sticky;
     top: 0px;
@@ -58,6 +59,13 @@ a {
     font-size: 25px;
 }
 
+.start{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+    width: 30%;
+}
+
 .center {
     /* background: white; */
     /* color: black; */
@@ -70,8 +78,6 @@ a {
     color: var(--backColor);
     background: white;
     border-radius: 20px;
-    margin-right: auto;
-    width: 30%;
 }
 
 .right{
@@ -95,7 +101,7 @@ a {
 
 .subEle {
     margin: 10px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -195,13 +201,20 @@ ul {
 }
 
 .searchform {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--front);
+    color: var(--front);
     margin: 20px;
     /* padding: 20px; */
     padding-bottom: 0px;
     position: relative;
     font-size: 25px;
     display: none;
+}
+
+.hideSearch{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s;
 }
 
 /*responsive*/
@@ -224,6 +237,10 @@ ul {
         background: transparent;
         flex-direction: row;
     }
+
+    .hideSearch{
+        display: none;
+    }
     .center>i{
         color: white;
     }
@@ -241,6 +258,7 @@ ul {
     flex: 1;
     border: none;
     width: 80vw;
+    background: transparent;
 }
 
 @media screen and (max-width:300px){
@@ -249,8 +267,9 @@ ul {
     }
 }
 
-@media screen and (max-width:520px){
+@media screen and (max-width:525px){
     .subEle{
         margin: 5px;
+        font-size: 20px;
     }
 }
