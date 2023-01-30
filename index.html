@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -47,7 +48,8 @@
                 <!-- <h2 id="nss">JUPrints</h2> -->
             </div>
             <div class="right">
-                <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
+                <div class="widesocial">
+                    <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
                         aria-hidden="true"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
                         class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i></a>
@@ -56,8 +58,58 @@
                         class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i></a>
 
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
+                </div>
+                <div class="socialMedia" onclick="showSocial()">
+                    <i class="fab fa-whatsapp" style="color:var(--front)" aria-hidden="true"></i>
+                    <i class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i>
+                    <i class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i>
+                    <i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i>
+                </div>
+                <script>
+                    getI = document.getElementsByClassName('socialMedia')[0];
+                    loc = {'cur':0, 'max':(getI.getElementsByTagName('i').length-1)*40, 'step':40, 'dis':true};
+
+                    const myTimeout = setTimeout(myGreeting, 1000);
+
+                    function myGreeting() {
+                        var st = loc['cur'] + loc['step'];
+                        console.log(st);
+                        if(st<=loc['max']){
+                            getI.style.top = (-1*st)+"px";
+                            loc['cur'] = st;
+                        }
+                        else{
+                            loc['cur'] = -40;
+                        }
+                        
+                        setTimeout(myGreeting, 1000);
+                    }
+
+                    function showSocial(){
+                        hideS = document.getElementsByClassName("hidesocial")[0];
+                        if(loc['dis']){
+                            hideS.style.height = "71px";
+                            loc['dis'] = false;
+                        }
+                        else{
+                            hideS.style.height = "0px";
+                            loc['dis'] = true;
+                        }
+                    }
+                </script>
             </div>
         </nav>
+        <div class="hidesocial">
+            <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
+                    class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i></a>
+
+            <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
+                    class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i></a>
+
+            <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
+        </div>
         <div class="hideSearch">
             <form action="/search.html" method="get" class="searchform">
                 <i class="fa fa-search" aria-hidden="true"></i>
