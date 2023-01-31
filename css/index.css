@@ -129,6 +129,7 @@ div.subflex {
 }
 
 .topcatagory {
+    width: 33%;
     margin: 5px;
     display: flex;
     flex-shrink: 0;
