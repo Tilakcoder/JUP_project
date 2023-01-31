@@ -46,7 +46,7 @@
                 <button id="Navbutton">&#8801;</button>
                 <form action="/search.html" method="get" class="center">
                     <i class="fa fa-search" aria-hidden="true" onclick="callSearch()"></i>
-                    <input type="search" name="sbar" id="search" placeholder="Search">
+                    <input type="search" name="sbar" id="search" placeholder="Search for Gifts">
                 </form>
             </div>
             <div class="left">
@@ -56,7 +56,8 @@
                 <!-- <h2 id="nss">JUPrints</h2> -->
             </div>
             <div class="right">
-                <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
+                <div class="widesocial">
+                    <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
                         aria-hidden="true"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
                         class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i></a>
@@ -65,23 +66,75 @@
                         class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i></a>
 
                 <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
+                </div>
+                <div class="socialMedia" onclick="showSocial()">
+                    <i class="fab fa-whatsapp" style="color:var(--front)" aria-hidden="true"></i>
+                    <i class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i>
+                    <i class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i>
+                    <i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i>
+                </div>
+                <script>
+                    getI = document.getElementsByClassName('socialMedia')[0];
+                    loc = {'cur':0, 'max':(getI.getElementsByTagName('i').length-1)*40, 'step':40, 'dis':true};
+
+                    const myTimeout = setTimeout(myGreeting, 1000);
+
+                    function myGreeting() {
+                        var st = loc['cur'] + loc['step'];
+                        console.log(st);
+                        if(st<=loc['max']){
+                            getI.style.top = (-1*st)+"px";
+                            loc['cur'] = st;
+                        }
+                        else{
+                            loc['cur'] = -40;
+                        }
+                        
+                        setTimeout(myGreeting, 1000);
+                    }
+
+                    function showSocial(){
+                        hideS = document.getElementsByClassName("hidesocial")[0];
+                        if(loc['dis']){
+                            hideS.style.height = "71px";
+                            loc['dis'] = false;
+                        }
+                        else{
+                            hideS.style.height = "0px";
+                            loc['dis'] = true;
+                        }
+                    }
+                </script>
             </div>
         </nav>
+        <div class="hidesocial">
+            <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp" style="color:var(--front)"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
+                    class="fab fa-facebook-f" aria-hidden="true" style="color:var(--front)"></i></a>
+
+            <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
+                    class="fab fa-instagram" aria-hidden="true" style="color:var(--front)"></i></a>
+
+            <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
+        </div>
         <div class="hideSearch">
             <form action="/search.html" method="get" class="searchform">
                 <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="search" name="sbar" id="searchout" placeholder="Search">
+                <input type="search" name="sbar" id="searchout" placeholder="Search for Gifts">
             </form>
         </div>
         <script>
             hidden = document.getElementsByClassName("hideSearch")[0];
             function callSearch(){
                 getH = hidden.getBoundingClientRect().height;
-                if(getH==0){
-                    hidden.style.height = "71px";
-                }
-                else{
-                    hidden.style.height = "0px";
+                if(hidden.style.display != "none"){
+                    if(getH==0){
+                        hidden.style.height = "71px";
+                    }
+                    else{
+                        hidden.style.height = "0px";
+                    }
                 }
             }
         </script>
