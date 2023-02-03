@@ -104,6 +104,28 @@ a {
     margin: 10px;
     font-size: 30px;
 }
+.subEle>i{
+    padding: 8px;
+}
+
+.Whatsapp{
+    background: #2ae22a;
+    border-radius: 28px;
+}
+/* .WhatsappT{
+    color:var(--front);
+    color: #2ae22a;
+} */
+
+.Facebook{
+    background: #0072ff;
+    border-radius: 10px;
+}
+
+.Insta{
+    background-image: linear-gradient(to bottom right, blue, purple, red, orange, yellow);
+    border-radius: 17px;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
