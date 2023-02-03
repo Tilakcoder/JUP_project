@@ -105,12 +105,14 @@ a {
     font-size: 30px;
 }
 .subEle>i{
+    /* width: 50px; */
     padding: 8px;
 }
 
 .Whatsapp{
-    background: #2ae22a;
-    border-radius: 28px;
+    /* background: #2ae22a;
+    border-radius: 28px; */
+    color: #2ae22a;
 }
 /* .WhatsappT{
     color:var(--front);
@@ -118,13 +120,15 @@ a {
 } */
 
 .Facebook{
-    background: #0072ff;
-    border-radius: 10px;
+    /* background: #0072ff;
+    border-radius: 10px; */
+    color: #0072ff;
 }
 
 .Insta{
     background-image: linear-gradient(to bottom right, blue, purple, red, orange, yellow);
-    border-radius: 17px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
