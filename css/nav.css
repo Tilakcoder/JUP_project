@@ -97,6 +97,10 @@ a {
     transition: 1s border;
 }
 
+.socialMedia>i{
+    margin: 1px;
+}
+
 #searchout{
     border: 1px solid transparent;
     transition: 1s border;

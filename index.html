@@ -66,7 +66,7 @@
                 </div>
                 <script>
                     getI = document.getElementsByClassName('socialMedia')[0];
-                    loc = {'cur':0, 'max':(getI.getElementsByTagName('i').length-1)*40, 'step':40, 'dis':true};
+                    loc = {'cur':0, 'max':(getI.getElementsByTagName('i').length-1)*42, 'step':42, 'dis':true};
 
                     const myTimeout = setTimeout(myGreeting, 1000);
 
@@ -78,7 +78,7 @@
                             loc['cur'] = st;
                         }
                         else{
-                            loc['cur'] = -40;
+                            loc['cur'] = -1*loc['step'];
                         }
                         
                         setTimeout(myGreeting, 1000);
