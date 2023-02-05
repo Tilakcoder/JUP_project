@@ -91,13 +91,22 @@ a {
     position: relative;
     width: 100%;
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--backColor);
     flex: 1;
-    border-radius: 10px;
+    transition: 1s border;
 }
-#search:active{
-    border: 1px solid red;
+
+#searchout{
+    border: 1px solid transparent;
+    transition: 1s border;
+}
+#searchout:focus{
+    outline: none;
+}
+#search:focus{
+    outline: none;
+    border-bottom: 1px solid var(--backColor);
 }
 
 .subEle {
@@ -114,14 +123,9 @@ a {
     border-radius: 28px; */
     color: #2ae22a;
 }
-/* .WhatsappT{
-    color:var(--front);
-    color: #2ae22a;
-} */
 
 .Facebook{
-    /* background: #0072ff;
-    border-radius: 10px; */
+
     color: #0072ff;
 }
 
@@ -297,6 +301,16 @@ ul {
     }
     .socialMedia{
         display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    .widesocial{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .subEle{
+        margin: 0px;
     }
 }
 
