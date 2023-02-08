@@ -19,7 +19,7 @@ body {
     /* border: 1px solid black; */
     position: relative;
     display: inline-block;
-    width: 95vw;
+    width: 90vw;
     height: 33vw;
     overflow: hidden;
 }
@@ -95,7 +95,7 @@ body {
 }
 
 .page {
-    width: 95vw;
+    width: 90vw;
     --stop: 0;
 }
 
