@@ -60,40 +60,63 @@
         .content>div {
             height: 100%;
             /* border: 1px solid black; */
-            font-size: 30px;
+            font-size: 35px;
+            flex-direction: column;
+        }
+
+        .Lpart {
             display: flex;
             justify-content: center;
         }
 
-        .Lpart {
-            /* display: flex; */
-            flex-direction: column;
-        }
-        .Rpart{
+        .Rpart {
+            display: flex;
             align-items: center;
+            justify-content: space-evenly;
         }
-        .showCase{
+
+        .showCase {
             width: 400px;
             height: 400px;
         }
+
         .MenuCat {
             margin: 10px;
-            text-decoration: none;
+            color: rgba(255, 255, 255, 0.493);
+            transition-property: font-size, color;
+            transition-duration: 0.2s;
+        }
+        .MenuCat:hover{
+            cursor: pointer;
+            font-size: 40px;
             color: white;
         }
-        .subL{
+
+        .subL {
             display: flex;
             flex-direction: column;
             padding-left: 50px;
+            height: 0px;
+            overflow: hidden;
+            transition: 0.2s height linear;
         }
-        .subL>a{
+
+        .subL>a {
             margin: 0px;
             text-decoration: none;
             color: white;
             font-size: 25px;
         }
-        .MenuCat:hover .subL{
-            background: red;
+
+        .MenuCat:hover + .subL {
+            height: 100px;
+        }
+        .subL:hover{height: 100px;}
+
+        @media screen and (max-width: 700px) {
+            .Rpart{
+                display: none;
+            }
         }
     </style>
 
@@ -104,26 +127,61 @@
         <div class="gap" style="height:100px"></div>
         <div class="content">
             <div class="Lpart">
-                <a class="MenuCat" onmouseover="changeIMG('./categories/yellowwatch.jpg')">
+                <div class="MenuCat" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens')">
                     Mens
-                    <div class="subL">
-                        <a href="">Watches</a>
-                        <a href="">Wallets</a>
-                    </div>
-                </a>
-                <a class="MenuCat" onmouseover="changeIMG('./categories/pexels-flat-hito-904350.jpg')">Women</a>
-                <a class="MenuCat" onmouseover="changeIMG('./categories/smallgirltoy.jpeg')">Kids</a>
-                <a class="MenuCat" onmouseover="changeIMG('./categories/loveframe.jpeg')">Couple</a>
-                <a class="MenuCat" onmouseover="changeIMG('./categories/pexels-moo-jii-8483970.jpg')">New Arrivals</a>
-                <a class="MenuCat" onmouseover="changeIMG('./categories/watch.jpeg')">Bulk Gifts</a>
+                </div>
+                <div class="subL">
+                    <a href="" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens > Watches')">Watches</a>
+                    <a href="" onmouseover="changeIMG('categories/menspurse1.jpeg', 'Mens > Wallets')">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-flat-hito-904350.jpg', 'Women')">
+                    Women
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/smallgirltoy.jpeg', 'Kids')">
+                    Kids
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/loveframe.jpeg', 'Couple')">
+                    Couple
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-moo-jii-8483970.jpg', 'New Arrivals')">
+                    New Arrivals
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/watch.jpeg', 'Bulk Gifts')">
+                    Bulk Gifts
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
                 <script>
-                    function changeIMG(lk) {
+                    function changeIMG(lk, mess='') {
+                        console.log(lk);
                         sc = document.getElementsByClassName('showCase')[0];
                         sc.src = lk;
+                        document.getElementById('getH').innerText = mess;
                     }
                 </script>
             </div>
             <div class="Rpart">
+                <div class="Rtop" id="getH">
+                    JUprints
+                </div>
                 <img class="showCase" src="./categories/watch.jpeg" alt="">
             </div>
         </div>
@@ -148,7 +206,7 @@
                 menuCon = true;
             }
         }
-        // MenuOpen();
+        MenuOpen();
     </script>
     <div class="nav">
         <nav>
