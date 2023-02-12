@@ -67,6 +67,9 @@
         .Lpart {
             display: flex;
             justify-content: center;
+            transition-property: color;
+            transition-duration: 0.2s;
+            transition-delay: 0.6s;
         }
 
         .Rpart {
@@ -82,7 +85,8 @@
 
         .MenuCat {
             margin: 10px;
-            color: rgba(255, 255, 255, 0.493);
+            margin-bottom: 0px;
+            /* color: rgba(255, 255, 255, 0.493); */
             transition-property: font-size, color;
             transition-duration: 0.2s;
         }
@@ -191,11 +195,14 @@
         function MenuOpen() {
             mp = document.getElementsByClassName('menuOpen')[0];
             con = mp.getElementsByClassName('content')[0];
+            lp = mp.getElementsByClassName('Lpart')[0];
+
             if (menuCon) {
                 mp.style.width = "0vw";
                 mp.style.height = "0vh"
                 mp.style.borderRadius = "0px 0px 100vh 0px";
                 con.style.color = 'transparent';
+                lp.style.color = 'transparent';
                 menuCon = false;
             }
             else {
@@ -203,6 +210,7 @@
                 mp.style.height = "100vh"
                 mp.style.borderRadius = "0px";
                 con.style.color = 'white';
+                lp.style.color = 'rgba(255, 255, 255, 0.493)';
                 menuCon = true;
             }
         }
