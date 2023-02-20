@@ -856,7 +856,7 @@
     <script>
         ca1 = document.getElementById('carry1');
         car2 = document.getElementById('carry2');
-        carryO = ["JUP 01", "JUP 02", "JUP 03", "JUP 04", "JUP 05", "JUP 06"];
+        carryO = Object.keys(allData).splice(0,10,1);
         latest = Object.keys(allData).slice(-6);
 
         places(ca1, latest);
