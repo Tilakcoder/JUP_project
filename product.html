@@ -30,10 +30,99 @@
 </head>
 
 <body>
+    <div class="menuOpen">
+        <div class="gap" style="height:100px"></div>
+        <div class="content">
+            <div class="Lpart">
+                <div class="MenuCat" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens')">
+                    Mens
+                </div>
+                <div class="subL">
+                    <a href="" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens > Watches')">Watches</a>
+                    <a href="" onmouseover="changeIMG('categories/menspurse1.jpeg', 'Mens > Wallets')">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-flat-hito-904350.jpg', 'Women')">
+                    Women
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/smallgirltoy.jpeg', 'Kids')">
+                    Kids
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/loveframe.jpeg', 'Couple')">
+                    Couple
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-moo-jii-8483970.jpg', 'New Arrivals')">
+                    New Arrivals
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <div class="MenuCat" onmouseover="changeIMG('./categories/watch.jpeg', 'Bulk Gifts')">
+                    Bulk Gifts
+                </div>
+                <div class="subL">
+                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
+                    <a href="">Wallets</a>
+                </div>
+                <script>
+                    function changeIMG(lk, mess='') {
+                        console.log(lk);
+                        sc = document.getElementsByClassName('showCase')[0];
+                        sc.src = lk;
+                        document.getElementById('getH').innerText = mess;
+                    }
+                </script>
+            </div>
+            <div class="Rpart">
+                <div class="Rtop" id="getH">
+                    JUprints
+                </div>
+                <img class="showCase" src="./categories/watch.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        menuCon = false;
+        function MenuOpen() {
+            mp = document.getElementsByClassName('menuOpen')[0];
+            con = mp.getElementsByClassName('content')[0];
+            lp = mp.getElementsByClassName('Lpart')[0];
+
+            if (menuCon) {
+                mp.style.width = "0vw";
+                mp.style.height = "0vh"
+                mp.style.borderRadius = "0px 0px 100vh 0px";
+                con.style.color = 'transparent';
+                lp.style.color = 'transparent';
+                menuCon = false;
+            }
+            else {
+                mp.style.width = "100vw";
+                mp.style.height = "100vh"
+                mp.style.borderRadius = "0px";
+                con.style.color = 'white';
+                lp.style.color = 'rgba(255, 255, 255, 0.493)';
+                menuCon = true;
+            }
+        }
+        // MenuOpen();
+    </script>
     <div class="nav">
         <nav>
             <div class="start">
-                <button id="Navbutton">&#8801;</button>
+                <button id="Navbutton" onclick="MenuOpen(this)">&#8801;</button>
                 <form action="/search.html" method="get" class="center">
                     <i class="fa fa-search" aria-hidden="true" onclick="callSearch()"></i>
                     <input type="search" name="sbar" id="search" placeholder="Search for Gifts">
@@ -47,14 +136,16 @@
             </div>
             <div class="right">
                 <div class="widesocial">
-                    <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp Whatsapp" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
-                        class="fab fa-facebook-f Facebook" aria-hidden="true"></i></a>
+                    <a href="https://bit.ly/3QqaHdi" class="subEle"><i class="fab fa-whatsapp Whatsapp"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100079019680210" class="subEle"><i
+                            class="fab fa-facebook-f Facebook" aria-hidden="true"></i></a>
 
-                <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
-                        class="fab fa-instagram Insta" aria-hidden="true" style="color:var(--front)"></i></a>
+                    <a href="https://instagram.com/jaipur_unique_prints?igshid=YmMyMTA2M2Y=" class="subEle"><i
+                            class="fab fa-instagram Insta" aria-hidden="true" style="color:var(--front)"></i></a>
 
-                <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true" style="color:var(--front)"></i></a>
+                    <a href="/" class="subEle"><i class="fa fa-home" aria-hidden="true"
+                            style="color:var(--front)"></i></a>
                 </div>
                 <div class="socialMedia" onclick="showSocial()">
                     <i class="fab fa-whatsapp Whatsapp" aria-hidden="true"></i>
@@ -64,31 +155,31 @@
                 </div>
                 <script>
                     getI = document.getElementsByClassName('socialMedia')[0];
-                    loc = {'cur':0, 'max':(getI.getElementsByTagName('i').length-1)*40, 'step':40, 'dis':true};
+                    loc = { 'cur': 0, 'max': (getI.getElementsByTagName('i').length - 1) * 42, 'step': 42, 'dis': true };
 
                     const myTimeout = setTimeout(myGreeting, 1000);
 
                     function myGreeting() {
                         var st = loc['cur'] + loc['step'];
-                        console.log(st);
-                        if(st<=loc['max']){
-                            getI.style.top = (-1*st)+"px";
+                        // console.log(st);
+                        if (st <= loc['max']) {
+                            getI.style.top = (-1 * st) + "px";
                             loc['cur'] = st;
                         }
-                        else{
-                            loc['cur'] = -40;
+                        else {
+                            loc['cur'] = -1 * loc['step'];
                         }
-                        
+
                         setTimeout(myGreeting, 1000);
                     }
 
-                    function showSocial(){
+                    function showSocial() {
                         hideS = document.getElementsByClassName("hidesocial")[0];
-                        if(loc['dis']){
+                        if (loc['dis']) {
                             hideS.style.height = "71px";
                             loc['dis'] = false;
                         }
-                        else{
+                        else {
                             hideS.style.height = "0px";
                             loc['dis'] = true;
                         }
@@ -115,13 +206,13 @@
         </div>
         <script>
             hidden = document.getElementsByClassName("hideSearch")[0];
-            function callSearch(){
+            function callSearch() {
                 getH = hidden.getBoundingClientRect().height;
-                if(hidden.style.display != "none"){
-                    if(getH==0){
+                if (hidden.style.display != "none") {
+                    if (getH == 0) {
                         hidden.style.height = "71px";
                     }
-                    else{
+                    else {
                         hidden.style.height = "0px";
                     }
                 }

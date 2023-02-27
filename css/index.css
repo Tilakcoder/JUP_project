@@ -199,13 +199,9 @@ div.subflex {
 
 
 .squared {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position-x: 0px;
-    background-position-y: 0px;
     /* width: 25vw; */
     flex: 1;
-    height: 285px;
+    /* height: 285px; */
     color: white;
     display: flex;
     justify-content: center;
@@ -213,7 +209,7 @@ div.subflex {
     margin: 10px;
     border-radius: 10px;
     padding: 0px;
-    min-width: 115px;
+    min-width: 120px;
     position: relative;
 }
 
@@ -342,6 +338,12 @@ div.subflex {
 
     .pcards {
         display: none;
+    }
+}
+
+@media screen and (min-width:890px) {
+    .cardself{
+        height: 400px;
     }
 }
 

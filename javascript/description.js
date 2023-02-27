@@ -43,6 +43,7 @@ function find(keyword) {
             }
         }
     }
+    console.log(results);
     return results;
 }
 
