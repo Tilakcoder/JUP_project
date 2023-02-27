@@ -30,6 +30,23 @@
         #cardHolder {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cardself{
+            flex: 1;
+            min-width: 250px;
+            height: 400px;
+            max-width: 300px;
+        }
+        @media screen and (max-width:550px){
+            .cardself{
+                min-width: 150px;
+                height: 300px;
+                max-width: 200px;
+            }
+            .cardIMG{
+                height: 65%;
+            }
         }
     </style>
 </head>
