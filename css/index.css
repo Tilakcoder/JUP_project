@@ -97,6 +97,8 @@ body {
 .page {
     width: 92vw;
     --stop: 0;
+    background-size: cover;
+    background-position-x: 50%;
 }
 
 .page:active {

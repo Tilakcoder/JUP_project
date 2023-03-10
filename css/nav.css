@@ -41,7 +41,7 @@ nav>div {
 }
 
 #Navbutton {
-    font-size: 50px;
+    font-size: 35px;
     border: none;
     padding: 10px;
     background: transparent;
@@ -56,7 +56,7 @@ a {
 
 .center,
 #search {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .start{
@@ -70,7 +70,8 @@ a {
     /* background: white; */
     /* color: black; */
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding: 5px;
     overflow: hidden;
@@ -110,7 +111,7 @@ a {
 }
 #search:focus{
     outline: none;
-    border-bottom: 1px solid var(--backColor);
+    /* border-bottom: 1px solid var(--backColor); */
 }
 
 .subEle {
