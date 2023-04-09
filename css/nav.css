@@ -74,6 +74,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+    padding-top: 7px;
     overflow: hidden;
     border-bottom: 1px solid var(--backColor);
     color: var(--backColor);
@@ -371,18 +372,27 @@ ul {
     background-image: linear-gradient(to right, rgb(12, 29, 54), rgba(18, 56, 114, 0.961));
     position: fixed;
     z-index: 1;
-    left: 0px;
+    left: -20px;
     top: 0px;
     padding: 10px;
-    height: 0vh;
+    height: 100vh;
     width: 0vw;
-    border-radius: 0px 0px 500px 0px;
+    /* border-radius: 0px 0px 500px 0px; */
     transition-property: height, width, border-radius;
     transition-duration: 0.4s;
     overflow: hidden;
-
+    color: white;
 }
-
+.show-menu{
+    left: 0px;
+    width: 200px;
+}
+.menu-link{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+/* 
 .content {
     color: transparent;
     transition: 1s color;
@@ -395,7 +405,6 @@ ul {
 
 .content>div {
     height: 100%;
-    /* border: 1px solid black; */
     font-size: 35px;
     flex-direction: column;
 }
@@ -422,7 +431,6 @@ ul {
 .MenuCat {
     margin: 10px;
     margin-bottom: 0px;
-    /* color: rgba(255, 255, 255, 0.493); */
     transition-property: font-size, color;
     transition-duration: 0.2s;
 }
@@ -457,4 +465,4 @@ ul {
     .Rpart{
         display: none;
     }
-}
+} */

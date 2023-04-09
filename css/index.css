@@ -324,7 +324,7 @@ div.subflex {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 0px;
+    margin: 10px;
     /* font-size: 30px; */
     font-weight: bold;
     color: white;

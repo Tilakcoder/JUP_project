@@ -53,91 +53,22 @@
 
 <body>
     <div class="menuOpen">
-        <div class="gap" style="height:100px"></div>
-        <div class="content">
-            <div class="Lpart">
-                <div class="MenuCat" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens')">
-                    Mens
-                </div>
-                <div class="subL">
-                    <a href="" onmouseover="changeIMG('./categories/yellowwatch.jpg', 'Mens > Watches')">Watches</a>
-                    <a href="" onmouseover="changeIMG('categories/menspurse1.jpeg', 'Mens > Wallets')">Wallets</a>
-                </div>
-                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-flat-hito-904350.jpg', 'Women')">
-                    Women
-                </div>
-                <div class="subL">
-                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
-                    <a href="">Wallets</a>
-                </div>
-                <div class="MenuCat" onmouseover="changeIMG('./categories/smallgirltoy.jpeg', 'Kids')">
-                    Kids
-                </div>
-                <div class="subL">
-                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
-                    <a href="">Wallets</a>
-                </div>
-                <div class="MenuCat" onmouseover="changeIMG('./categories/loveframe.jpeg', 'Couple')">
-                    Couple
-                </div>
-                <div class="subL">
-                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
-                    <a href="">Wallets</a>
-                </div>
-                <div class="MenuCat" onmouseover="changeIMG('./categories/pexels-moo-jii-8483970.jpg', 'New Arrivals')">
-                    New Arrivals
-                </div>
-                <div class="subL">
-                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
-                    <a href="">Wallets</a>
-                </div>
-                <div class="MenuCat" onmouseover="changeIMG('./categories/watch.jpeg', 'Bulk Gifts')">
-                    Bulk Gifts
-                </div>
-                <div class="subL">
-                    <a href="" class="child" onmouseover="changeIMG('./categories/yellowwatch.jpg')">Watches</a>
-                    <a href="">Wallets</a>
-                </div>
-                <script>
-                    function changeIMG(lk, mess='') {
-                        console.log(lk);
-                        sc = document.getElementsByClassName('showCase')[0];
-                        sc.src = lk;
-                        document.getElementById('getH').innerText = mess;
-                    }
-                </script>
-            </div>
-            <div class="Rpart">
-                <div class="Rtop" id="getH">
-                    JUprints
-                </div>
-                <img class="showCase" src="./categories/watch.jpeg" alt="">
-            </div>
-        </div>
+        <div class="gap" style="height:50px"></div>
+        <h1>Catagories</h1>
+        <ul style="color: white;">
+            <li><a class="menu-link" href="">Mens</a></li>
+            <li><a class="menu-link" href="">Womens</a></li>
+            <li><a class="menu-link" href="">Kids</a></li>
+            <li><a class="menu-link" href="">Friend</a></li>
+            <li><a class="menu-link" href="">Birthday</a></li>
+            <li><a class="menu-link" href="">Combos</a></li>
+        </ul>
     </div>
     <script>
         menuCon = false;
         function MenuOpen() {
             mp = document.getElementsByClassName('menuOpen')[0];
-            con = mp.getElementsByClassName('content')[0];
-            lp = mp.getElementsByClassName('Lpart')[0];
-
-            if (menuCon) {
-                mp.style.width = "0vw";
-                mp.style.height = "0vh"
-                mp.style.borderRadius = "0px 0px 100vh 0px";
-                con.style.color = 'transparent';
-                lp.style.color = 'transparent';
-                menuCon = false;
-            }
-            else {
-                mp.style.width = "100vw";
-                mp.style.height = "100vh"
-                mp.style.borderRadius = "0px";
-                con.style.color = 'white';
-                lp.style.color = 'rgba(255, 255, 255, 0.493)';
-                menuCon = true;
-            }
+            mp.classList.toggle("show-menu");
         }
         // MenuOpen();
     </script>
@@ -151,8 +82,9 @@
                 </form>
             </div>
             <div class="left">
-                <a class="logo" href="/">
-                    <img src="./image/juprints-low-resolution-color-logo.png" class="jup" alt="Juprints">
+                <a class="logo" href="/" style="color: white; font-size: 40px;">
+                    <!-- <img src="./image/juprints-low-resolution-color-logo.png" class="jup" alt="Juprints"> -->
+                    <u><b style="color: yellow;">JUP</b>rints</u>
                 </a>
                 <!-- <h2 id="nss">JUPrints</h2> -->
             </div>
